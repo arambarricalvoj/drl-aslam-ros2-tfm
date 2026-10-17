@@ -24,6 +24,9 @@ import copy
 from math import inf as Infinity
 import time
 
+import csv
+import os
+
 from geometry_msgs.msg import Pose, Twist, PoseWithCovarianceStamped
 from rosgraph_msgs.msg import Clock
 from nav_msgs.msg import Odometry, OccupancyGrid
@@ -48,6 +51,8 @@ NUM_SCAN_SAMPLES = 500 #500 #util.get_scan_count() Set manually according to set
 LINEAR = 0
 ANGULAR = 1
 MAX_GOAL_DISTANCE = math.sqrt(ARENA_LENGTH**2 + ARENA_WIDTH**2)
+SAVE_PERCENTAGE_CSV = True
+
 class DRLEnvironment(Node):
     def __init__(self):
         super().__init__('drl_environment')
@@ -127,6 +132,25 @@ class DRLEnvironment(Node):
         self.map_known_percent_prev = 0.0
         self.map_known_percent_curr = 0.0
         self.pose_sub = self.create_subscription( PoseWithCovarianceStamped, '/pose', self.pose_callback, qos )
+
+        # CSV con el porcentaje de mapa conocido al finalizar cada episodio
+        if SAVE_PERCENTAGE_CSV:
+            self.episode_metrics_csv = os.path.expanduser(
+                "~/map_known_percent.csv"
+            )
+            self.episode_count = 0
+
+            # Crear el CSV con cabecera si todavía no existe o está vacío
+            if not os.path.exists(self.episode_metrics_csv) or \
+                    os.path.getsize(self.episode_metrics_csv) == 0:
+                with open(self.episode_metrics_csv, mode="w", newline="") as f:
+                    writer = csv.writer(f)
+                    writer.writerow([
+                        "episode",
+                        "map_known_percent",
+                        "outcome"
+                    ])
+        
         # clients
         self.task_succeed_client = self.create_client(RingGoal, 'task_succeed')
         self.task_fail_client = self.create_client(RingGoal, 'task_fail')
@@ -150,6 +174,29 @@ class DRLEnvironment(Node):
 
         self.steps = {'progress': 0, 'since_last_progress': 0, 'total': 0}
 
+    def save_episode_metrics(self):
+        """Guarda el porcentaje de mapa conocido al finalizar un episodio."""
+
+        known_percent = 100.0 - self.processor.unknown_percent_gem
+        known_percent = float(numpy.clip(known_percent, 0.0, 100.0))
+
+        self.episode_count += 1
+
+        with open(self.episode_metrics_csv, mode="a", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow([
+                self.episode_count,
+                f"{known_percent:.4f}",
+                str(self.succeed)
+            ])
+
+        self.get_logger().info(
+            f"Episodio {self.episode_count} finalizado | "
+            f"Map known: {known_percent:.2f}% | "
+            f"Resultado: {self.succeed} | "
+            f"CSV: {self.episode_metrics_csv}"
+        )
+    
     """*******************************************************************************
     ** Callback functions and relevant functions
     *******************************************************************************"""
@@ -428,7 +475,7 @@ class DRLEnvironment(Node):
         
         self.processor.set_final_cell()
         # Ruta Docker
-        self.processor.save_map_png("/home/isaac_sim/turtlebot3_drlnav_ws/src/turtlebot3_drl/model/Precision-5820-Tower-X-Series/td3_8_stage_9/trayectoria_final.png")
+        #self.processor.save_map_png("/home/isaac_sim/turtlebot3_drlnav_ws/src/turtlebot3_drl/model/Precision-5820-Tower-X-Series/td3_8_stage_9/trayectoria_final.png")
         self.processor.reset_path()
         self.processor.lem_map = None
         self.processor.gem_map = None
@@ -476,6 +523,10 @@ class DRLEnvironment(Node):
         response.distance_traveled = 0.0 # Will be updated at the end of episode
         if self.done:
             response.distance_traveled = self.total_distance
+
+            if SAVE_PERCENTAGE_CSV:
+                self.save_episode_metrics()
+
             # Reset variables
             self.succeed = UNKNOWN
             self.total_distance = 0.0
