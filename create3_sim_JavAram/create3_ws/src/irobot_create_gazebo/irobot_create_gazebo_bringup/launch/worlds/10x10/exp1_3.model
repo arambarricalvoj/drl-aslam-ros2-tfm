@@ -82,7 +82,7 @@
         <collision name='Wall_1_Collision'>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
           <pose>0 0 0.25 0 -0 0</pose>
@@ -104,18 +104,11 @@
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-          </material>
         </visual>
-        <pose>-2.91 0 0 0 -0 1.5708</pose>
+        <pose>-5 0 0 0 -0 1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -124,7 +117,7 @@
         <collision name='Wall_2_Collision'>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
           <pose>0 0 0.25 0 -0 0</pose>
@@ -146,18 +139,11 @@
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-          </material>
         </visual>
-        <pose>0 2.91 0 0 -0 0</pose>
+        <pose>0 5 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -166,7 +152,7 @@
         <collision name='Wall_3_Collision'>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
           <pose>0 0 0.25 0 -0 0</pose>
@@ -188,18 +174,11 @@
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-          </material>
         </visual>
-        <pose>2.91 0 0 0 0 -1.5708</pose>
+        <pose>5 0 0 0 0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -208,7 +187,7 @@
         <collision name='Wall_4_Collision'>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
           <pose>0 0 0.25 0 -0 0</pose>
@@ -230,18 +209,11 @@
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>6 0.15 0.5</size>
+              <size>10 0.15 0.5</size>
             </box>
           </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-          </material>
         </visual>
-        <pose>0 -2.91 0 0 -0 3.14159</pose>
+        <pose>0 -5 0 0 -0 3.14159</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -268,10 +240,10 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>21 687000000</sim_time>
-      <real_time>21 949597213</real_time>
-      <wall_time>1792153475 643416453</wall_time>
-      <iterations>21687</iterations>
+      <sim_time>41 426000000</sim_time>
+      <real_time>13 295230980</real_time>
+      <wall_time>1792225312 511411144</wall_time>
+      <iterations>13057</iterations>
       <model name='ground_plane'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -282,93 +254,75 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='inner_walls_large'>
+      <model name='inner_walls_large_0'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='inner_wall_1'>
-          <pose>-2.5 -1.5 0 0 -0 0</pose>
+        <link name='Wall_11'>
+          <pose>-2.64666 3.75236 0 0 0 -1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
-        <link name='inner_wall_2'>
-          <pose>1.15 -2.5 0 0 0 -1.5708</pose>
+        <link name='Wall_16'>
+          <pose>-3.84066 0.028362 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
-        <link name='inner_wall_3'>
-          <pose>1.15 -1.5 0 0 -0 1.5708</pose>
+        <link name='Wall_18'>
+          <pose>-2.63516 -3.18668 0 0 -0 1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
-        <link name='inner_wall_4'>
-          <pose>-0.85 -2.45 0 0 0 -1.5708</pose>
+        <link name='Wall_24'>
+          <pose>-0.243161 1.04581 0 0 0 -1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
-        <link name='inner_wall_5'>
-          <pose>2.4 0.4 0 0 -0 0</pose>
+        <link name='Wall_24_clone'>
+          <pose>2.14623 -1.21222 0 0 0 -1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
-        <link name='inner_wall_6'>
-          <pose>-1.35 2.4 0 0 -0 1.5708</pose>
+        <link name='Wall_28'>
+          <pose>-0.220157 -3.74164 0 0 -0 1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
-        <link name='inner_wall_7'>
-          <pose>1.45 0.4 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='inner_wall_8'>
-          <pose>0.7 -1 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='inner_wall_9'>
-          <pose>-0.9 0.25 0 0 -0 1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='inner_wall_9_clone'>
-          <pose>0.491117 1.87661 0 0 -0 2.35859</pose>
+        <link name='Wall_36'>
+          <pose>0.870568 0.262507 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='outer_walls_large'>
-        <pose>0 -0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='Wall_1'>
-          <pose>-2.91 0 0 0 -0 1.5708</pose>
+          <pose>-5 0 0 0 -0 1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='Wall_2'>
-          <pose>0 2.91 0 0 -0 0</pose>
+          <pose>0 5 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='Wall_3'>
-          <pose>2.91 -0 0 0 0 -1.5708</pose>
+          <pose>5 0 0 0 0 -1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='Wall_4'>
-          <pose>0 -2.91 0 0 -0 3.14159</pose>
+          <pose>0 -5 0 0 -0 3.14159</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -378,37 +332,39 @@
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    <model name='inner_walls_large'>
-      <link name='inner_wall_1'>
-        <pose>-2.5 -1.5 0 0 -0 0</pose>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-0.088997 -1.11787 17.5903 -0 1.5138 1.58819</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='inner_walls_large_0'>
+      <link name='Wall_11'>
+        <pose>-2.64666 3.75236 0 0 0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <visual name='inner_wall_visual'>
+        <visual name='Wall_11_Visual'>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>2.5 0.15 0.5</size>
             </box>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
             <shader type='pixel'/>
           </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='inner_wall_1_collision'>
+        <collision name='Wall_11_Collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>2.5 0.15 0.5</size>
             </box>
           </geometry>
           <surface>
@@ -458,36 +414,31 @@
           </surface>
         </collision>
       </link>
-      <link name='inner_wall_2'>
-        <pose>1.15 -2.5 0 0 0 -1.5708</pose>
+      <link name='Wall_16'>
+        <pose>-3.84066 0.028362 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <visual name='inner_wall_2_visual'>
+        <visual name='Wall_16_Visual'>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>2.5 0.15 0.5</size>
             </box>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
             <shader type='pixel'/>
           </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='inner_wall_2_collision'>
+        <collision name='Wall_16_Collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>2.5 0.15 0.5</size>
             </box>
           </geometry>
           <surface>
@@ -537,36 +488,43 @@
           </surface>
         </collision>
       </link>
-      <link name='inner_wall_3'>
-        <pose>1.15 -1.5 0 0 -0 1.5708</pose>
+      <link name='Wall_18'>
+        <pose>-2.63516 -3.18668 0 0 -0 1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <visual name='inner_wall_3_visual'>
+        <inertial>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+          <mass>0</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='Wall_18_Visual'>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>3.6483 0.15 0.5</size>
             </box>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
             <shader type='pixel'/>
           </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='inner_wall_3_collision'>
+        <collision name='Wall_18_Collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>3.6483 0.15 0.5</size>
             </box>
           </geometry>
           <surface>
@@ -616,36 +574,43 @@
           </surface>
         </collision>
       </link>
-      <link name='inner_wall_4'>
-        <pose>-0.85 -2.45 0 0 0 -1.5708</pose>
+      <link name='Wall_24'>
+        <pose>-0.243161 1.04581 0 0 0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <visual name='inner_wall_4_visual'>
+        <inertial>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+          <mass>0</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='Wall_24_Visual'>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>3.08806 0.15 0.5</size>
             </box>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
             <shader type='pixel'/>
           </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='inner_wall_4_collision'>
+        <collision name='Wall_24_Collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>3.08806 0.15 0.5</size>
             </box>
           </geometry>
           <surface>
@@ -695,36 +660,43 @@
           </surface>
         </collision>
       </link>
-      <link name='inner_wall_5'>
-        <pose>2.4 0.4 0 0 -0 0</pose>
+      <link name='Wall_24_clone'>
+        <pose>2.14623 -1.21222 0 0 0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <visual name='inner_wall_5_visual'>
+        <inertial>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+          <mass>0</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='Wall_24_Visual'>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>3.08806 0.15 0.5</size>
             </box>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
             <shader type='pixel'/>
           </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='inner_wall_5_collision'>
+        <collision name='Wall_24_Collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>3.08806 0.15 0.5</size>
             </box>
           </geometry>
           <surface>
@@ -774,36 +746,31 @@
           </surface>
         </collision>
       </link>
-      <link name='inner_wall_6'>
-        <pose>-1.35 2.4 0 0 -0 1.5708</pose>
+      <link name='Wall_28'>
+        <pose>-0.220157 -3.74164 0 0 -0 1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <visual name='inner_wall_6_visual'>
+        <visual name='Wall_28_Visual'>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>2.5 0.15 0.5</size>
             </box>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
             <shader type='pixel'/>
           </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='inner_wall_6_collision'>
+        <collision name='Wall_28_Collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>2.5 0.15 0.5</size>
             </box>
           </geometry>
           <surface>
@@ -853,273 +820,43 @@
           </surface>
         </collision>
       </link>
-      <link name='inner_wall_7'>
-        <pose>1.45 0.4 0 0 -0 0</pose>
+      <link name='Wall_36'>
+        <pose>0.870568 0.262507 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <visual name='inner_wall_7_visual'>
+        <inertial>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+          <mass>0</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='Wall_36_Visual'>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
+              <size>2.41831 0.15 0.5</size>
             </box>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
             <shader type='pixel'/>
           </material>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='inner_wall_7_collision'>
+        <collision name='Wall_36_Collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose>0 0 0.25 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1 0.15 0.5</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
-              </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
-            </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
-            <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
-              <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
-              </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
-            </contact>
-          </surface>
-        </collision>
-      </link>
-      <link name='inner_wall_8'>
-        <pose>0.7 -1 0 0 -0 0</pose>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-        <visual name='inner_wall_8_visual'>
-          <pose>0 0 0.25 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>1 0.15 0.5</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-            <shader type='pixel'/>
-          </material>
-          <transparency>0</transparency>
-          <cast_shadows>1</cast_shadows>
-        </visual>
-        <collision name='inner_wall_8_collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose>0 0 0.25 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.85 0.15 0.5</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
-              </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
-            </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
-            <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
-              <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
-              </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
-            </contact>
-          </surface>
-        </collision>
-      </link>
-      <link name='inner_wall_9'>
-        <pose>-0.9 0.25 0 0 -0 1.5708</pose>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-        <visual name='inner_wall_9_visual'>
-          <pose>0 0 0.25 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>1 0.15 0.5</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-            <shader type='pixel'/>
-          </material>
-          <transparency>0</transparency>
-          <cast_shadows>1</cast_shadows>
-        </visual>
-        <collision name='inner_wall_9_collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose>0 0 0.25 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.85 0.15 0.5</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
-              </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
-            </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
-            <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
-              <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
-              </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
-            </contact>
-          </surface>
-        </collision>
-      </link>
-      <link name='inner_wall_9_clone'>
-        <pose>0.491117 1.87661 0 0 -0 2.35859</pose>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-        <visual name='inner_wall_9_visual'>
-          <pose>0 0 0.25 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>1 0.15 0.5</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Wood</name>
-            </script>
-            <ambient>1 1 1 1</ambient>
-            <shader type='pixel'/>
-          </material>
-          <transparency>0</transparency>
-          <cast_shadows>1</cast_shadows>
-        </visual>
-        <collision name='inner_wall_9_collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose>0 0 0.25 0 -0 0</pose>
-          <geometry>
-            <box>
-              <size>0.85 0.15 0.5</size>
+              <size>2.41831 0.15 0.5</size>
             </box>
           </geometry>
           <surface>
@@ -1173,12 +910,5 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>0 0 0 0 -0 0</pose>
     </model>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose>0.783543 -3.68893 12.065 0 1.27964 1.5762</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
   </world>
 </sdf>
