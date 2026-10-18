@@ -104,7 +104,9 @@ class DRLGazebo(Node):
         self.set_entity_state_client = self.create_client(SetEntityState, '/gazebo/set_entity_state')
 
         # Posiciones base seguras (centros de zonas válidas)
-        self.base_positions = [
+
+        # 6x6 train
+        """self.base_positions = [
             {"x": -2.0, "y": 0.0, "yaw": 0.0, "dx": 0.4, "dy": 1.0, "dyaw": 6.28},
             {"x": -1.5, "y": -2.0, "yaw": 0.0, "dx": 0.4, "dy": 0.0, "dyaw": 6.28},
             {"x": 0.0, "y": 0.0, "yaw": 0.0, "dx": 0.5, "dy": 0.4, "dyaw": 6.28},
@@ -118,6 +120,16 @@ class DRLGazebo(Node):
             {"x": -1.0, "y": -1.0, "yaw": 0.0, "dx": 1.0, "dy": 0.0, "dyaw": 6.28},
             {"x": 0.5, "y": -1.0, "yaw": 0.0, "dx": 0.0, "dy": 1.3, "dyaw": 6.28},
             {"x": 1.5, "y": 0.5, "yaw": 0.0, "dx": 0.0, "dy": 1.0, "dyaw": 6.28}
+        ]"""
+
+        # 8x8 train
+        self.base_positions = [
+                    {"x": 0.0, "y": 0.0, "yaw": 0.0, "dx": 1.0, "dy": 0.4, "dyaw": 6.28},
+                    {"x": 2.0, "y": -3.0, "yaw": 0.0, "dx": 1.0, "dy": 0.0, "dyaw": 6.28},
+                    {"x": 3.0, "y": 2.0, "yaw": 0.0, "dx": 0.0, "dy": 1.0, "dyaw": 6.28},
+                    {"x": 1.0, "y": 2.0, "yaw": 0.0, "dx": 0.0, "dy": 0.0, "dyaw": 6.28},
+                    {"x": -3.0, "y": 0.0, "yaw": 0.0, "dx": 0.0, "dy": 1.5, "dyaw": 6.28},
+                    {"x": -2.0, "y": -3.0, "yaw": 0.0, "dx": 1.0, "dy": 1.5, "dyaw": 6.28},
         ]
 
         self.init_callback()
