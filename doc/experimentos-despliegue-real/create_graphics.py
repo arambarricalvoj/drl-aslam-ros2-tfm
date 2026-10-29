@@ -8,9 +8,7 @@ import matplotlib.pyplot as plt
 # CONFIGURACIÓN
 # ==================================================
 BASE_DIR = (
-    "/home/javierac/Documents/ucm/TFM-PFM/"
-    "experimentos-14-07-26-20260715T152136Z-1-001/"
-    "experimentos-14-07-26"
+    "/home/javierarambarricalvo/Documents/drl-aslam-ros2-tfm/doc/experimentos-despliegue-real"
 )
 
 OUTPUT_DIR = os.path.join(
@@ -36,26 +34,26 @@ N_POINTS_MEAN = 500
 VARIABLES = {
 
     "Explored_Percent": {
-        "ylabel": "Porcentaje de exploración (%)",
-        "title": "Exploración",
+        "ylabel": "Exploration percentage (%)",
+        "title": "Exploration",
         "color": "tab:blue"
     },
 
     "Distance_Traveled_m": {
-        "ylabel": "Distancia recorrida (m)",
-        "title": "Movimiento",
+        "ylabel": "Traveled distance (m)",
+        "title": "Movement",
         "color": "tab:orange"
     },
 
     "Min_Obstacle_Dist_m": {
-        "ylabel": "Distancia mínima a obstáculo (m)",
-        "title": "Seguridad",
+        "ylabel": "Minimum distance to an obstacle (m)",
+        "title": "Safety",
         "color": "tab:green"
     },
 
     "Collisions": {
-        "ylabel": "Cantidad de colisiones",
-        "title": "Colisiones",
+        "ylabel": "Number of collisions",
+        "title": "Collisions",
         "color": "tab:red"
     }
 
@@ -109,7 +107,7 @@ def plot_individual(df, exp_name, variable):
         linewidth=2
     )
     plt.xlabel(
-        "Tiempo (s)"
+        "Time (s)"
     )
     plt.ylabel(
         config["ylabel"]
@@ -167,7 +165,7 @@ def plot_summary(df, exp_name):
             config["title"]
         )
         ax.set_xlabel(
-            "Tiempo (s)"
+            "Time (s)"
         )
         ax.set_ylabel(
             config["ylabel"]
@@ -247,7 +245,7 @@ def plot_mean(df_mean, df_std):
             df_mean[variable],
             color=config["color"],
             linewidth=3,
-            label="Media"
+            label="Mean"
         )
 
         plt.fill_between(
@@ -256,11 +254,11 @@ def plot_mean(df_mean, df_std):
             df_mean[variable] + df_std[variable],
             color=config["color"],
             alpha=0.2,
-            label="Desviación estándar"
+            label="Standard deviation"
         )
 
         plt.xlabel(
-            "Tiempo (s)"
+            "Time (s)"
         )
 
         plt.ylabel(
@@ -268,7 +266,7 @@ def plot_mean(df_mean, df_std):
         )
 
         plt.title(
-            f"{config['title']} - Media de 10 experimentos"
+            f"{config['title']} - Average of 10 experiments"
         )
 
         plt.legend()
@@ -291,39 +289,44 @@ def plot_mean(df_mean, df_std):
 
 def plot_mean_summary(df_mean, df_std):
     """
-    Genera resumen 2x2 de las medias con desviación estándar.
+    Genera un resumen 2x2 de las medias con desviación estándar.
+    Cada gráfica incluye su propia leyenda.
     """
 
     fig, axes = plt.subplots(
         2,
         2,
-        figsize=(12,8)
+        figsize=(12, 8)
     )
 
     plots = [
-        ("Explored_Percent", axes[0,0]),
-        ("Distance_Traveled_m", axes[1,0]),
-        ("Min_Obstacle_Dist_m", axes[0,1]),
-        ("Collisions", axes[1,1])
+        ("Explored_Percent", axes[0, 0]),
+        ("Distance_Traveled_m", axes[1, 0]),
+        ("Min_Obstacle_Dist_m", axes[0, 1]),
+        ("Collisions", axes[1, 1])
     ]
 
     for variable, ax in plots:
 
         config = VARIABLES[variable]
 
+        # Línea de la media
         ax.plot(
             df_mean[TIME_COLUMN],
             df_mean[variable],
             color=config["color"],
-            linewidth=3
+            linewidth=3,
+            label="Mean"
         )
 
+        # Banda de desviación estándar
         ax.fill_between(
             df_mean[TIME_COLUMN],
             df_mean[variable] - df_std[variable],
             df_mean[variable] + df_std[variable],
             color=config["color"],
-            alpha=0.2
+            alpha=0.2,
+            label="Standard deviation"
         )
 
         ax.set_title(
@@ -331,17 +334,23 @@ def plot_mean_summary(df_mean, df_std):
         )
 
         ax.set_xlabel(
-            "Tiempo (s)"
+            "Time (s)"
         )
 
         ax.set_ylabel(
             config["ylabel"]
         )
 
+        # Leyenda individual para cada gráfica
+        ax.legend(
+            loc="best",
+            fontsize=9
+        )
+
         ax.grid(True)
 
     fig.suptitle(
-        "Rendimiento medio en 10 experimentos",
+        "Average performance across 10 experiments",
         fontsize=16
     )
 
