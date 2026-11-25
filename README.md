@@ -1,4 +1,8 @@
+It will be available in English soon... :)
+
 (El repositorio se completará y finalizará próximamente...)
+
+El código se basa en los repositorios: https://github.com/iRobotEducation/create3_sim/tree/humble y https://github.com/tomasvr/turtlebot3_drlnav.
 
 # TFM: Control autónomo de un robot móvil usando ROS2, aprendizaje por refuerzo y SLAM
 - Autor: Javier Arambarri Calvo
